@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getDatabase } from '../lib/notion';
 import { Text } from './[id].js';
 // import styles from './index.module.css';
@@ -75,12 +76,62 @@ export default function Home({ posts }) {
             empresarial, económico, social y ambiental de la región y el país.
           </p>
           <div
-            className={`lg:grid lg:grid-cols-3 grid-flow-row gap-8`}
+            className={`px-0 sm:px-20 md:px-48 lg:px-0 lg:grid lg:grid-cols-3 grid-flow-row gap-8`}
             style={styles.qs[0]}
           >
             <PhotoCardOne style={styles.qs[1]} />
-            <PhotoCardOne style={styles.qs[2]} />
-            <PhotoCardOne style={styles.qs[3]} />
+            <PhotoCardOne c="hidden lg:block" style={styles.qs[2]} />
+            <PhotoCardOne c="hidden lg:block" style={styles.qs[3]} />
+          </div>
+        </section>
+
+        <section className={`flex flex-col gap-8`}>
+          <h2 className={`text-4xl font-bold text-center mt-12`}>
+            Objetivos de Adagro
+          </h2>
+          <div
+            className={`grid grid-flow-row grid-cols-1 lg:grid-cols-7 gap-8`}
+          >
+            <ol class="col-span-4 list-decimal leading-tight list-outside mx-6 flex flex-col justify-center gap-3">
+              <li>
+                El fomento de la actividad agrícola, pecuaria y agroindustrial.
+              </li>
+              <li>
+                Ser cuerpo consultivo de entidades públicas y privadas de
+                carácter nacional e internacional o cualquier otra índole en
+                asuntos relacionados con el agro y el medio ambiente.
+              </li>
+              <li>
+                Prestar los servicios de asistencia técnica especializada sobre
+                frutales, hortalizas, cereales, forestales, permanentes y café,
+                entre otros, en establecimiento, fertilización y nutrición,
+                programas de control sanitario y fitosanitario, cosecha y pos
+                cosecha. Así mismo, asesoría, capacitación, extensión,
+                asistencia técnica rural, ambiental y de transferencia de
+                tecnología.
+              </li>
+              <li>
+                Planificar, diseñar, formular, ejecutar y auditar planes,
+                programas y proyectos en los sectores agropecuario, ambiental,
+                de seguridad alimentaria, infraestructura, vivienda, saneamiento
+                básico, educación, recreación, deporte y cultura.
+              </li>
+              <li>
+                Formular, promover, administrar y desarrollar proyectos
+                agroindustriales, de agricultura urbana y de impacto ambiental,
+                etc.
+              </li>
+            </ol>
+            <div className={`flex items-center col-span-3`}>
+              <img
+                className="object-cover w-full rounded-2xl drop-shadow-lg"
+                src={
+                  'https://images.unsplash.com/photo-1507311036505-05669fc503cb?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGNyb3AlMjBmaWVsZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500'
+                }
+                width={200}
+                height={200}
+              />
+            </div>
           </div>
         </section>
 
