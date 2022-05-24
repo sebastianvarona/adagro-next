@@ -8,12 +8,17 @@ import PhotoCardOne from '../components/PhotoCardOne';
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
+const bgQs = '';
+
 const styles = {
   hero: {
     backgroundImage:
       "url('https://images.unsplash.com/photo-1563201515-adbe35c669c5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174')",
   },
   qs: [
+    {
+      backgroundImage: `url('${bgQs}')`,
+    },
     {
       backgroundImage:
         "url('https://images.unsplash.com/photo-1519557663006-e0423f3a092b?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687')",
@@ -31,7 +36,7 @@ const styles = {
 
 export default function Home({ posts }) {
   return (
-    <div className="max-w-7xl mx-auto min-h-screen">
+    <div className="max-w-7xl mx-auto px-8 min-h-screen">
       <Head>
         <title>Adagro</title>
         <link rel="icon" href="/favicon.ico" />
@@ -69,10 +74,10 @@ export default function Home({ posts }) {
             técnico, administrativo y jurídico para el desarrollo agro
             empresarial, económico, social y ambiental de la región y el país.
           </p>
-          <div className={`grid grid-cols-3 gap-8 h-96`}>
-            <PhotoCardOne style={styles.qs[0]} />
+          <div className={`grid grid-cols-3 gap-8 h-96`} style={styles.qs[0]}>
             <PhotoCardOne style={styles.qs[1]} />
             <PhotoCardOne style={styles.qs[2]} />
+            <PhotoCardOne style={styles.qs[3]} />
           </div>
         </section>
 
