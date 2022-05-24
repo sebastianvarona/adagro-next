@@ -36,7 +36,7 @@ const styles = {
 
 export default function Home({ posts }) {
   return (
-    <div className="max-w-7xl mx-auto px-8 min-h-screen">
+    <div className="max-w-7xl mx-auto px-12 min-h-screen">
       <Head>
         <title>Adagro</title>
         <link rel="icon" href="/favicon.ico" />
@@ -74,7 +74,10 @@ export default function Home({ posts }) {
             técnico, administrativo y jurídico para el desarrollo agro
             empresarial, económico, social y ambiental de la región y el país.
           </p>
-          <div className={`grid grid-cols-3 gap-8 h-96`} style={styles.qs[0]}>
+          <div
+            className={`lg:grid lg:grid-cols-3 grid-flow-row gap-8`}
+            style={styles.qs[0]}
+          >
             <PhotoCardOne style={styles.qs[1]} />
             <PhotoCardOne style={styles.qs[2]} />
             <PhotoCardOne style={styles.qs[3]} />
