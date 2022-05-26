@@ -7,6 +7,15 @@
 
 .container h1 {
   font-size: 32px;
+  font-weight: bold;
+}
+
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+  font-weight: bold;
 }
 
 .container img {
