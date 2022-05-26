@@ -113,7 +113,7 @@ export default function Home({ posts }) {
                 <li>
                   Formular, promover, administrar y desarrollar proyectos
                   agroindustriales, de agricultura urbana y de impacto
-                  ambiental, etc.
+                  ambiental, etc
                 </li>
               </ol>
             </div>
