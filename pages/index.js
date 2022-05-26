@@ -45,12 +45,14 @@ export default function Home({ posts }) {
       <Head>
         <title>Adagro</title>
         <link rel="icon" href="/favicon.ico" />
+        <script src="../node_modules/tw_elements/dist/js/index.js"></script>
       </Head>
 
       <Layout>
         <Banner2 />
 
         <div className={`max-w-7xl mx-auto px-12`}>
+          {/* Quiemes Somos */}
           <section className={`flex flex-col gap-8`}>
             <h2 className={`text-4xl font-bold text-center mt-20`}>
               ¿Quiénes Somos?
@@ -74,6 +76,7 @@ export default function Home({ posts }) {
             </div>
           </section>
 
+          {/* Objetivos */}
           <section className={`flex flex-col gap-8`}>
             <h2 className={`text-4xl font-bold text-center mt-20`}>
               Objetivos de Adagro
@@ -81,11 +84,11 @@ export default function Home({ posts }) {
             <div className={`relative flex justify-end items-center pt-16`}>
               <div className="w-[55%]">
                 <img
-                  className="rounded-3xl"
+                  className="rounded-2xl"
                   src="https://images.unsplash.com/photo-1507311036505-05669fc503cb?ixlib=rb-1.2.1"
                 />
               </div>
-              <ol className="w-1/2 font-medium list-decimal leading-tight list-outside pl-16 flex flex-col justify-center gap-3 p-8 rounded-3xl drop-shadow-md bg-white/60 shadow-lg  absolute top-0 left-0 backdrop-blur-md">
+              <ol className="w-1/2 font-medium list-decimal leading-tight list-outside pl-16 flex flex-col justify-center gap-3 p-8 rounded-2xl drop-shadow-md bg-white/60 shadow-lg  absolute top-0 left-0 backdrop-blur-md">
                 <li>
                   El fomento de la actividad agrícola, pecuaria y
                   agroindustrial.
@@ -119,13 +122,14 @@ export default function Home({ posts }) {
             </div>
           </section>
 
+          {/* Certificado */}
           <section className="text-gray-800 mt-20 relative">
             <div
-              className="relative overflow-hidden bg-no-repeat bg-cover h-80 bg-center rounded-3xl"
+              className="relative overflow-hidden bg-no-repeat bg-cover h-80 bg-center rounded-2xl"
               style={styles.cert}
             ></div>
             <div className="container text-gray-800 px-4 md:px-12 z-20">
-              <div className="block rounded-lg shadow-lg py-10 md:py-12 px-4 md:px-6 -mt-24 bg-white/60 backdrop-blur-md">
+              <div className="block rounded-2xl shadow-lg py-10 md:py-12 px-4 md:px-6 -mt-24 bg-white/60 backdrop-blur-md">
                 <div className="flex flex-wrap justify-center text-center lg:text-left">
                   <div className="grow-0 shrink-0 basis-auto w-full xl:w-10/12 px-6">
                     <div className="grid lg:grid-cols-3 gap-x-6 items-center">
@@ -145,6 +149,7 @@ export default function Home({ posts }) {
             </div>
           </section>
 
+          {/* Ultimas Entradas */}
           <section>
             <h3 className="text-4xl font-bold text-center mt-20 mb-8">
               Ultimas Entradas
@@ -179,7 +184,7 @@ export default function Home({ posts }) {
                     <Link href={`/${post.id}`}>
                       <div>
                         <a
-                          className={`font-medium inline-block px-3 py-1 bg-orange-500/70 hover:bg-orange-500 transition cursor-pointer rounded-3xl text-white`}
+                          className={`font-medium inline-block px-3 py-1 bg-orange-500/70 hover:bg-orange-500 transition cursor-pointer rounded-2xl text-white`}
                         >
                           Leer entrada
                         </a>
