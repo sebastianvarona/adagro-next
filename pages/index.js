@@ -1,15 +1,16 @@
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import { getDatabase } from "../lib/notion";
-import { Text } from "./[id].js";
-// import styles from './index.module.css';
-import PhotoCardOne from "../components/PhotoCardOne";
-import Layout from "../components/Layout";
-import Banner1 from "../components/landing/Banner1";
-import Banner2 from "../components/landing/Banner2";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
+import Head from 'next/head';
+import Link from 'next/link';
+import { getDatabase } from '../lib/notion';
+import { Text } from './[id].js';
+import PhotoCardOne from '../components/PhotoCardOne';
+import Layout from '../components/Layout';
+import Banner2 from '../components/landing/Banner2';
+import Aliados from '../components/landing/Aliados';
+import Image from 'next/image';
+
+const qs1 = '/images/inicio/ini1.png';
+const qs2 = '/images/inicio/ini2.png';
+const qs3 = '/images/inicio/ini3.png';
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
@@ -20,19 +21,13 @@ const styles = {
   },
   qs: [
     {
-      backgroundImage: `url('')`,
+      backgroundImage: `url(${qs1})`,
     },
     {
-      backgroundImage:
-        "url('https://images.unsplash.com/photo-1519557663006-e0423f3a092b?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687')",
+      backgroundImage: `url(${qs2})`,
     },
     {
-      backgroundImage:
-        "url('https://images.unsplash.com/photo-1624791338465-2c1af1eb117d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170')",
-    },
-    {
-      backgroundImage:
-        "url('https://images.unsplash.com/photo-1529159942819-334f07de4fe5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687')",
+      backgroundImage: `url(${qs3})`,
     },
   ],
   cert: {
@@ -51,7 +46,9 @@ export default function Home({ posts }) {
       </Head>
 
       <Layout>
-        <Banner2 />
+        <div className="px-12">
+          <Banner2 />
+        </div>
 
         <div className={`max-w-7xl mx-auto px-12`}>
           {/* Quienes Somos */}
@@ -70,11 +67,10 @@ export default function Home({ posts }) {
             </p>
             <div
               className={`px-0 sm:px-20 md:px-48 lg:px-0 lg:grid lg:grid-cols-3 grid-flow-row gap-8`}
-              style={styles.qs[0]}
             >
-              <PhotoCardOne style={styles.qs[1]} />
+              <PhotoCardOne style={styles.qs[0]} />
+              <PhotoCardOne c="hidden lg:block" style={styles.qs[1]} />
               <PhotoCardOne c="hidden lg:block" style={styles.qs[2]} />
-              <PhotoCardOne c="hidden lg:block" style={styles.qs[3]} />
             </div>
           </section>
 
@@ -85,9 +81,11 @@ export default function Home({ posts }) {
             </h2>
             <div className={`relative flex justify-end items-center pt-16`}>
               <div className="w-[55%]">
-                <img
+                <Image
                   className="rounded-2xl"
-                  src="https://images.unsplash.com/photo-1507311036505-05669fc503cb?ixlib=rb-1.2.1"
+                  src="/images/inicio/objetivos.png"
+                  width={750}
+                  height={500}
                 />
               </div>
               <ol className="w-1/2 font-medium list-decimal leading-tight list-outside pl-16 flex flex-col justify-center gap-3 p-8 rounded-2xl drop-shadow-md bg-white/60 shadow-lg  absolute top-0 left-0 backdrop-blur-md">
@@ -129,148 +127,7 @@ export default function Home({ posts }) {
             <h3 className={`text-4xl font-bold text-center mt-20`}>
               Nuestros Aliados
             </h3>
-            <Splide
-              options={{
-                rewind: true,
-                perPage: 4,
-                gap: 30,
-                autoplay: true,
-                padding: 100,
-                pagination: false,
-              }}
-              aria-label="React Splide Example"
-            >
-              <SplideSlide className="flex justify-center items-center">
-                <svg
-                  className="w-12 h-12"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </SplideSlide>
-              <SplideSlide className="flex justify-center items-center">
-                <svg
-                  className="w-12 h-12"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                  ></path>
-                </svg>
-              </SplideSlide>
-              <SplideSlide className="flex justify-center items-center">
-                <svg
-                  className="w-12 h-12"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                  ></path>
-                </svg>
-              </SplideSlide>
-              <SplideSlide className="flex justify-center items-center">
-                <svg
-                  className="w-12 h-12"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-                  ></path>
-                </svg>
-              </SplideSlide>
-              <SplideSlide className="flex justify-center items-center">
-                <svg
-                  className="w-12 h-12"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                  ></path>
-                </svg>
-              </SplideSlide>
-              <SplideSlide className="flex justify-center items-center">
-                <svg
-                  className="w-12 h-12"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                  ></path>
-                </svg>
-              </SplideSlide>
-              <SplideSlide className="flex justify-center items-center">
-                <svg
-                  className="w-12 h-12"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  ></path>
-                </svg>
-              </SplideSlide>
-              <SplideSlide className="flex justify-center items-center">
-                <svg
-                  className="w-12 h-12"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                  ></path>
-                </svg>
-              </SplideSlide>
-            </Splide>
+            <Aliados />
           </section>
           {/* Certificado */}
           <section className="text-gray-800 mt-20 relative">
@@ -308,11 +165,11 @@ export default function Home({ posts }) {
             <ol className={`grid grid-cols-3 gap-8`}>
               {posts.map((post) => {
                 const date = new Date(post.last_edited_time).toLocaleString(
-                  "es-ES",
+                  'es-ES',
                   {
-                    month: "long",
-                    day: "2-digit",
-                    year: "numeric",
+                    month: 'long',
+                    day: '2-digit',
+                    year: 'numeric',
                   }
                 );
                 return (

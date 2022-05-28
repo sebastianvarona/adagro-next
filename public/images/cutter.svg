@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="863" height="152.889" viewBox="0 0 863 152.889">
+  <defs>
+    <style>
+      .cls-1, .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-4 {
+        fill: rgba(0,0,0,0);
+      }
+
+      .cls-5 {
+        fill: rgba(255,255,255,0.3);
+      }
+
+      .cls-6 {
+        fill: rgba(255,255,255,0.6);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_11" data-name="Rectángulo 11" class="cls-1" width="863" height="152.889"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectángulo_10" data-name="Rectángulo 10" class="cls-1" width="863" height="188" transform="translate(0 0.12)"/>
+    </clipPath>
+  </defs>
+  <g id="cutter" class="cls-2">
+    <g id="cutter-blanco" class="cls-3" transform="translate(0 19.269)">
+      <g id="custom_1" data-name="custom – 1" transform="translate(-34.61 0.339)">
+        <rect id="Rectángulo_9" data-name="Rectángulo 9" class="cls-4" width="859.856" height="177.544" transform="translate(37.972 0)"/>
+        <g id="Grupo_1" data-name="Grupo 1" transform="translate(0 5.394)">
+          <path id="back" class="cls-5" d="M920.522,91.324h-16.06C873.957,87.386,797.33,87.94,736.32,113.506s-174.042,73.627-235.052,73.42c-61.01.207-127.128-19.2-196.412-24.359-71.68-6.221-75.173,15.9-136.182,26.746-61.01,11.263-97.306,11.375-138.169,0L0,193.977v63.18H915.146l2.706-114.218" transform="translate(0 -89.52)"/>
+          <path id="middle" class="cls-6" d="M896.686,101.166l-2.643,85.469H0V136.86l34.528,2.5c36.5-.162,80.285-16.338,139.888-24.766,59.6-8.118,53.632-9.8,123.659-5.147,67.686,3.863,129.653,11.636,189.256,11.48,59.6.155,163.589-45.985,227.9-59.706S832.485,41.649,864.242,47.747l29.8,6.521" transform="translate(35.275 -18.98)"/>
+          <path id="front" class="cls-7" d="M903.466,84.887l-2.66,81.414H0V102.674L32.844,114.96C65.506,123.048,206.152,76.51,276.7,80.944c68.2,3.68,151.346,16.68,211.4,16.532,60.054.148,172.485-31.157,232.538-49.381s139.644-29.811,169.669-27h16.273" transform="translate(8.829 15.27)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
