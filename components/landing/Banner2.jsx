@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const styles = {
   hero: {
@@ -10,14 +10,14 @@ const styles = {
 export default function Banner2() {
   return (
     <section
-      className={`h-[75vh] rounded-3xl max-w-7xl mx-auto overflow-hidden bg-cover bg-top flex items-stretch relative`}
+      className={`h-[75vh] mx-12 rounded-3xl max-w-7xl mx-auto overflow-hidden bg-cover bg-top flex items-stretch relative`}
       style={styles.hero}
     >
       <div
         className={`flex-1 bg-black/20 p-20 flex justify-center items-center`}
       >
         <h1 className={`text-5xl text-white font-bold text-center`}>
-          Asociación De Agricultores <br />{' '}
+          Asociación De Agricultores <br />{" "}
           <span className={`text-7xl font-extrabold`}>Colombianos</span>
         </h1>
       </div>

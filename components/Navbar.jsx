@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React, { Fragment } from 'react';
-import { Popover, Transition } from '@headlessui/react';
+import React, { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
 import {
   BookmarkAltIcon,
   CalendarIcon,
@@ -14,96 +14,96 @@ import {
   SupportIcon,
   ViewGridIcon,
   XIcon,
-} from '@heroicons/react/outline';
-import { ChevronDownIcon } from '@heroicons/react/solid';
+} from "@heroicons/react/outline";
+import { ChevronDownIcon } from "@heroicons/react/solid";
 
-const logo = 'images/logo.svg';
+const logo = "images/logo.svg";
 
 const solutions = [
   {
-    name: 'Analytics',
+    name: "Analytics",
     description:
-      'Get a better understanding of where your traffic is coming from.',
-    href: '#',
+      "Get a better understanding of where your traffic is coming from.",
+    href: "#",
     icon: ChartBarIcon,
   },
   {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
+    name: "Engagement",
+    description: "Speak directly to your customers in a more meaningful way.",
+    href: "#",
     icon: CursorClickIcon,
   },
   {
-    name: 'Security',
+    name: "Security",
     description: "Your customers' data will be safe and secure.",
-    href: '#',
+    href: "#",
     icon: ShieldCheckIcon,
   },
   {
-    name: 'Integrations',
+    name: "Integrations",
     description: "Connect with third-party tools that you're already using.",
-    href: '#',
+    href: "#",
     icon: ViewGridIcon,
   },
   {
-    name: 'Automations',
+    name: "Automations",
     description:
-      'Build strategic funnels that will drive your customers to convert',
-    href: '#',
+      "Build strategic funnels that will drive your customers to convert",
+    href: "#",
     icon: RefreshIcon,
   },
 ];
 const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
+  { name: "Watch Demo", href: "#", icon: PlayIcon },
+  { name: "Contact Sales", href: "#", icon: PhoneIcon },
 ];
 const resources = [
   {
-    name: 'Help Center',
+    name: "Help Center",
     description:
-      'Get all of your questions answered in our forums or contact support.',
-    href: '#',
+      "Get all of your questions answered in our forums or contact support.",
+    href: "#",
     icon: SupportIcon,
   },
   {
-    name: 'Guides',
+    name: "Guides",
     description:
-      'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
+      "Learn how to maximize our platform to get the most out of it.",
+    href: "#",
     icon: BookmarkAltIcon,
   },
   {
-    name: 'Events',
+    name: "Events",
     description:
-      'See what meet-ups and other events we might be planning near you.',
-    href: '#',
+      "See what meet-ups and other events we might be planning near you.",
+    href: "#",
     icon: CalendarIcon,
   },
   {
-    name: 'Security',
-    description: 'Understand how we take your privacy seriously.',
-    href: '#',
+    name: "Security",
+    description: "Understand how we take your privacy seriously.",
+    href: "#",
     icon: ShieldCheckIcon,
   },
 ];
 const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
+  { id: 1, name: "Boost your conversion rate", href: "#" },
   {
     id: 2,
-    name: 'How to use search engine optimization to drive traffic to your site',
-    href: '#',
+    name: "How to use search engine optimization to drive traffic to your site",
+    href: "#",
   },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
+  { id: 3, name: "Improve your customer experience", href: "#" },
 ];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
   return (
     <Popover className="relative bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-12">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
@@ -123,15 +123,15 @@ export default function Navbar() {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? 'text-gray-900' : 'text-gray-500',
-                      'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                      open ? "text-gray-900" : "text-gray-500",
+                      "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     )}
                   >
                     <span>Solutions</span>
                     <ChevronDownIcon
                       className={classNames(
-                        open ? 'text-gray-600' : 'text-gray-400',
-                        'ml-2 h-5 w-5 group-hover:text-gray-500'
+                        open ? "text-gray-600" : "text-gray-400",
+                        "ml-2 h-5 w-5 group-hover:text-gray-500"
                       )}
                       aria-hidden="true"
                     />
@@ -211,15 +211,15 @@ export default function Navbar() {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? 'text-gray-900' : 'text-gray-500',
-                      'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                      open ? "text-gray-900" : "text-gray-500",
+                      "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     )}
                   >
                     <span>More</span>
                     <ChevronDownIcon
                       className={classNames(
-                        open ? 'text-gray-600' : 'text-gray-400',
-                        'ml-2 h-5 w-5 group-hover:text-gray-500'
+                        open ? "text-gray-600" : "text-gray-400",
+                        "ml-2 h-5 w-5 group-hover:text-gray-500"
                       )}
                       aria-hidden="true"
                     />
@@ -284,8 +284,8 @@ export default function Navbar() {
                               href="#"
                               className="font-medium text-indigo-600 hover:text-indigo-500"
                             >
-                              {' '}
-                              View all posts{' '}
+                              {" "}
+                              View all posts{" "}
                               <span aria-hidden="true">&rarr;</span>
                             </a>
                           </div>
@@ -383,7 +383,7 @@ export default function Navbar() {
                   Sign up
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{' '}
+                  Existing customer?{" "}
                   <a href="#" className="text-indigo-600 hover:text-indigo-500">
                     Sign in
                   </a>
