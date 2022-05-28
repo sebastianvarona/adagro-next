@@ -134,9 +134,9 @@ const renderBlock = (block) => {
       const caption_file = value.caption ? value.caption[0]?.plain_text : '';
       return (
         <figure>
-          <div className={styles.file}>
+          <div className={'p-1 rounded hover:bg-black/10'}>
             📎{' '}
-            <Link href={src_file} passHref>
+            <Link className={`hover:underline`} href={src_file} passHref>
               {lastElementInArray.split('?')[0]}
             </Link>
           </div>

@@ -89,7 +89,7 @@
 }
 
 .file:hover {
-  background: rgba(55, 53, 47, 0.08);
+  background: rgba(55, 53, 47, 0.2);
   cursor: pointer;
   border-radius: 2px;
 }
@@ -109,18 +109,4 @@
 .bookmark {
   display: block;
   margin-bottom: 10px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .code {
-    background-color: rgb(15, 8, 28);
-  }
-  .file:hover {
-    background: rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-    border-radius: 2px;
-  }
-  .pre {
-    background-color: rgb(15, 8, 28);
-  }
 }
