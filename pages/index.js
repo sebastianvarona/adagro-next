@@ -210,10 +210,11 @@ export default function Home({ posts }) {
 
 export const getStaticProps = async () => {
   const database = await getDatabase(databaseId);
+  const p = database.results.slice(0, 3);
 
   return {
     props: {
-      posts: database,
+      posts: p,
     },
     revalidate: 1,
   };

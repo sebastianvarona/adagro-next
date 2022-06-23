@@ -176,7 +176,7 @@ export default function Post({ page, blocks }) {
             {blocks.map((block) => (
               <Fragment key={block.id}>{renderBlock(block)}</Fragment>
             ))}
-            <Link href="/">
+            <Link href="/blog">
               <a className={styles.back}>← Go home</a>
             </Link>
           </section>
@@ -189,7 +189,7 @@ export default function Post({ page, blocks }) {
 export const getStaticPaths = async () => {
   const database = await getDatabase(databaseId);
   return {
-    paths: database.map((page) => ({ params: { id: page.id } })),
+    paths: database.results.map((page) => ({ params: { id: page.id } })),
     fallback: true,
   };
 };
